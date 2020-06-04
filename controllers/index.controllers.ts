@@ -78,7 +78,7 @@ export const updateUser = async (
     const updatedUser = body.value;
 
     users = users.map((user) =>
-      user.id === params.id ? { ...user, ...updateUser } : user
+      user.id === params.id ? { ...user, ...updatedUser } : user
     );
     response.status = 200;
     response.body = {
